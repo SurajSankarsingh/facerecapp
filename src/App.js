@@ -128,7 +128,7 @@ loadUser = (data) => {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://frozen-taiga-72679.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -138,7 +138,7 @@ loadUser = (data) => {
     .then(response => response.json())
     .then(response => {
       if (response) {
-        fetch('http://localhost:3000/image', {
+        fetch('https://frozen-taiga-72679.herokuapp.com/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
